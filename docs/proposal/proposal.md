@@ -1,95 +1,77 @@
 # School of Computing &mdash; Year 4 Project Proposal Form
 
-> Edit (then commit and push) this document to complete your proposal form.
-> Make use of figures / diagrams where appropriate.
->
-> Do not rename this file.
-
 ## SECTION A
 
-|                     |                   |
-|---------------------|-------------------|
-|Project Title:       | xxxxxx            |
-|Student 1 Name:      | xxxxxx            |
-|Student 1 ID:        | xxxxxx            |
-|Student 2 Name:      | xxxxxx            |
-|Student 2 ID:        | xxxxxx            |
-|Project Supervisor:  | xxxxxx            |
-
-> Ensure that the Supervisor formally agrees to supervise your project; this is only recognised once the
-> Supervisor assigns herself/himself via the project Dashboard.
->
-> Project proposals without an assigned
-> Supervisor will not be accepted for presentation to the Approval Panel.
+|                     |                             |
+|---------------------|-----------------------------|
+|Project Title:       | Final Year Project Expo App |
+|Student 1 Name:      | Matt Simon Enriquez         |
+|Student 1 ID:        | 20369441                    |
+|Student 2 Name:      | Bien Dominic Managbanag     |
+|Student 2 ID:        | 20415296                    |
+|Project Supervisor:  | Jennifer Foster             |
 
 ## SECTION B
 
-> Guidance: This document is expected to be approximately 3 pages in length, but it can exceed this page limit.
-> It is also permissible to carry forward content from this proposal to your later documents (e.g. functional
-> specification) as appropriate.
->
-> Your proposal must include *at least* the following sections.
-
-
 ### Introduction
 
-> Describe the general area covered by the project.
+Our idea for our project is a mobile application that can be used for expos in Dublin City University. The application would feature an interactive map where users can see easily see where project demonstrations are located. They can press on the booth/stall to see more information about the project and its details.
 
 ### Outline
 
-> Outline the proposed project.
+A mobile application designed to replace or supplement the current Project Expo booklet. This application would include a map which would allow the users to easily locate where each of the project demonstrations are located. The map would be interactive meaning users can click onto a project which would then take them to a page or side menu containing the project information such as its description, project area, project technology, member details and their supervisors. The map can then be cleared after the expo has been completed and be repurposed for a future expo meaning it can be reused. The app will also contain a list featuring all the projects in the expo. When a user clicks on a project from the list, it will lead them to the location of the project demo.
 
 ### Background
 
-> Where did the ideas come from?
+This idea was originally thought of by Jennifer Foster with the intention of replacing or supplementing the current DCU Project Expo booklet.
 
 ### Achievements
 
-> What functions will the project provide? Who will the users be?
+The mobile application will feature functions such as an interactive map where a user can select on a booth/stall that opens a page or sidemenu to gain more information on the project about its details. It will also feature a list of all the projects so a user can select a project and find out the location of where it is being demonstrated. It will also feature a function where the projects can be cleared from the venue and be replaced for a future expo. This project is inteded for users such as expo attendees.
 
 ### Justification
 
-> Why/when/where/how will it be useful?
+This mobile application will intend to help expo attendees on locating a project demonstration or gaining more information on a project on a mobile device instead of a physical booklet. This will reduce the time the user has to flip through a booklet and instead use their mobile device to locate or know more about the project they are interested in. This application will be useful during an expo on campus. The user or expo attendee can easily download this application and use it while walking around the expo.
 
 ### Programming language(s)
 
-> List the proposed language(s) to be used.
+* Java
+* JavaScript
+* Kotlin
+* C++
+* Swift
+* ReactNative
 
 ### Programming tools / Tech stack
 
-> Describe the compiler, database, web server, etc., and any other software tools you plan to use.
+* Visual Studio Code
 
 ### Hardware
 
-> Describe any non-standard hardware components which will be required.
+A mobile device with an operating system of Android and/or iOS.
 
 ### Learning Challenges
 
-> List the main new things (technologies, languages, tools, etc) that you will have to learn.
+* JavaScript
+* Kotlin
+* C++
+* Swift
+* ReactNative
+* Creating a mobile application
+  * Transferring the application to a mobile device
 
 ### Breakdown of work
 
-> Clearly identify who will undertake which parts of the project.
->
-> It must be clear from the explanation of this breakdown of work both that each student is responsible for
-> separate, clearly-defined tasks, and that those responsibilities substantially cover all of the work required
-> for the project.
+A thorough plan will be made on the work to be completed and split equally among the members based on their abilities. Any difficulties that arise from completing the work will be met by both members supporting each other to get the task completed.
 
 #### Student 1
 
-> *Student 1 should complete this section.*
+* Programming
+* Documentation
+* Research
+* Timekeeping
+* Testing
 
 #### Student 2
 
 > *Student 2 should complete this section.*
-
-## Example
-
-> Example: Here's how you can include images in markdown documents...
-
-<!-- Basically, just use HTML! -->
-
-<p align="center">
-  <img src="./res/cat.png" width="300px">
-</p>
-
