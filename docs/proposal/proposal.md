@@ -9,7 +9,7 @@
 |Student 1 ID:        | 20369441                    |
 |Student 2 Name:      | Bien Dominic Managbanag     |
 |Student 2 ID:        | 20415296                    |
-|Project Supervisor:  | Jennifer Foster             |
+|Project Supervisor:  | Dr. Jennifer Foster         |
 
 ## SECTION B
 
@@ -23,7 +23,7 @@ A mobile application designed to replace or supplement the current Project Expo 
 
 ### Background
 
-This idea was originally thought of by Jennifer Foster with the intention of replacing or supplementing the current DCU Project Expo booklet.
+This idea was originally thought of by Dr. Jennifer Foster with the intention of replacing or supplementing the current DCU Project Expo booklet.
 
 ### Achievements
 
@@ -74,4 +74,8 @@ A thorough plan will be made on the work to be completed and split equally among
 
 #### Student 2
 
-> *Student 2 should complete this section.*
+* Programming
+* Brainstorm & Planning
+* Management
+* Documentation
+* Testing
