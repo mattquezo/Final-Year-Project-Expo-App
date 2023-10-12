@@ -19,15 +19,15 @@ Our idea for our project is a mobile application that can be used for expos in D
 
 ### Outline
 
-A mobile application designed to replace or supplement the current Project Expo booklet. This application would include a map which would allow the users to easily locate where each of the project demonstrations are located. The map would be interactive meaning users can click onto a project which would then take them to a page or side menu containing the project information such as its description, project area, project technology, member details and their supervisors. The map can then be cleared after the expo has been completed and be repurposed for a future expo meaning it can be reused. The app will also contain a list featuring all the projects in the expo. When a user clicks on a project from the list, it will lead them to the location of the project demo.
+A mobile application designed to replace or supplement the current Project Expo booklet. This application would include a map which would allow the users to easily locate where each of the project demonstrations are located. The map would be interactive meaning users can tap on a booth/stall where the demo is located which would then take them to a page or side menu containing the project information such as its description, project area, project technology, member details, and video demonstration. The map can then be cleared after the expo has been completed and be repurposed for a future expo meaning it can be reused. The app will also contain a list featuring all the projects in the expo. When a user taps on a project from the list, it will lead them to the location of the project demo.
 
 ### Background
 
-This idea was originally thought of by Dr. Jennifer Foster with the intention of replacing or supplementing the current DCU Project Expo booklet.
+This idea was originally suggested by Dr. Jennifer Foster with the intention of replacing or supplementing the current DCU Project Expo booklet.
 
 ### Achievements
 
-The mobile application will feature functions such as an interactive map where a user can select on a booth/stall that opens a page or sidemenu to gain more information on the project about its details. It will also feature a list of all the projects so a user can select a project and find out the location of where it is being demonstrated. It will also feature a function where the projects can be cleared from the venue and be replaced for a future expo. This project is inteded for users such as expo attendees.
+The mobile application will feature functions such as an interactive map where a user can select on a booth/stall that opens a page or side menu to gain more information on the project about its details. It will also feature a list of all the projects so a user can select a project and find out the location of where it is being demonstrated. The app will include a search and filter feature where the user's project interests can be specified. A feature allowing an admin to clear the projects on the map and repurpose it for another expo will also be incorporated. A feedback feature will also be developed for users such as expo attendees to leave comments on projects.
 
 ### Justification
 
