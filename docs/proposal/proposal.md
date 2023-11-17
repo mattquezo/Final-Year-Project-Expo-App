@@ -15,7 +15,7 @@
 
 ### Introduction
 
-Our idea for our project is a mobile application that can be used for expos in Dublin City University. The application would feature an interactive map where users can see easily see where project demonstrations are located. They can press on the booth/stall to see more information about the project and its details.
+Our idea for our project is a mobile application that can be used for expos in Dublin City University. The application would feature an interactive map where users can see easily see where project demonstrations are located. Users are able to press on the booth/stall to see more information about the project and its details.
 
 ### Outline
 
