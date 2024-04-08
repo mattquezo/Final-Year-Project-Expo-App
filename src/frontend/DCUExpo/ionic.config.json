@@ -1,0 +1,7 @@
+{
+  "name": "DCUExpo",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

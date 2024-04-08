@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Details
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Details</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <h2>{{ data?.projectTitle }}</h2>
+    <p>{{ data?.projectSummary }}</p>
+    
+    <h3>Class</h3>
+    <p> {{ data?.studentProgramme?.studentProgrammeName }} </p>
+    
+    <h3>Project Area</h3>
+    <ion-item *ngFor="let item of data?.projectAreas">
+      <ion-label>
+        <p>{{ item.projectAreaName }}</p>
+      </ion-label>
+    </ion-item>
+    
+    <h3>Project Technology</h3>
+    <ion-item *ngFor="let item of data?.projectTechnologies">
+      <ion-label>
+        <p>{{ item.projectTechnologyName }}</p>
+      </ion-label>
+    </ion-item>
+    
+    <h3>Student Name(s)</h3>
+    <ion-item *ngFor="let item of data?.projectStudents">
+      <ion-label>
+        <p>{{ item.studentName }}</p>
+      </ion-label>
+    </ion-item>
+    
+    <h3>Email</h3>
+    <ion-item *ngFor="let item of data?.projectStudents">
+      <ion-label>
+        <p>{{ item.studentEmail }}</p>
+      </ion-label>
+    </ion-item>
+    
+    <h3>Supervisor</h3>
+    <p>{{ data?.supervisorsName }}</p>
+
+    <h3>Location</h3>
+    <p>{{ data?.projectLocation }}</p>
+  </ion-content>
+
+</ion-content>
