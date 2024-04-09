@@ -17,13 +17,28 @@
     <ion-input label="Text input" placeholder="Enter text" [(ngModel)]="searchString"
       (keyup.enter)="handleSearch()"></ion-input>
   </ion-item> -->
+  
+  <ion-item>
+    <ion-select label="Filter by Area" placeholder="Area" (ionChange)="getProjectByArea($event.target.value)">
+      <ion-select-option *ngFor="let projectArea of areasList"
+        [value]=projectArea>{{ projectArea }}</ion-select-option>
+    </ion-select>
+  </ion-item>
 
-  <ion-list>
-    <ion-item *ngFor="let item of data" (click)="selectProject(item)">
-      <ion-label>
-        <h2>{{ item.projectTitle }}</h2>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-item>
+    <ion-select label="Filter by Technology" placeholder="Technology" (ionChange)="getProjectByTechnology($event.target.value)">
+      <ion-select-option *ngFor="let projectTech of technologiesList"
+        [value]=projectTech>{{ projectTech }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+    <ion-list>
+      <ion-item *ngFor="let item of data" (click)="selectProject(item)">
+        <ion-label>
+          <h2>{{ item.projectTitle }}</h2>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+    <ion-spinner *ngIf="!dataLoaded"></ion-spinner>
 
 </ion-content>
