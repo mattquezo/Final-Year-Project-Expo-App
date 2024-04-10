@@ -79,5 +79,11 @@ namespace DCUExpoApp.Controllers
         {
             return _crudService.GetProjectByStudentProgramme(studentProgramme).ToArray();
         }
+
+        [HttpGet("projectlocation/{projectLocation}", Name = "GetExpoProjectByProjectLocation")]
+        public ExpoProject[] GetProjectLocation(string projectLocation)
+        {
+            return _crudService.GetProjectByProjectLocation(projectLocation).ToArray();
+        }
     }
 }

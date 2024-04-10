@@ -59,5 +59,15 @@ namespace DCUExpoApp.Services
                 .Include(p => p.ProjectStudents)
                 .Where(p => p.StudentProgramme!.StudentProgrammeName! == studentProgramme).ToList();
         }
+
+        public List<ExpoProject> GetProjectByProjectLocation(string projectLocation)
+        {
+            return _expoContext.Projects
+                .Include(p => p.ProjectAreas)
+                .Include(p => p.StudentProgramme)
+                .Include(p => p.ProjectTechnologies)
+                .Include(p => p.ProjectStudents)
+                .Where(p => p.ProjectLocation == projectLocation).ToList();
+        }
     }
 }
