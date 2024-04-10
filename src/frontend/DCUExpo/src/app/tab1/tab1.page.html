@@ -32,6 +32,20 @@
     </ion-select>
   </ion-item>
 
+  <ion-item>
+    <ion-select label="Filter by Programme" placeholder="Programme" (ionChange)="getProjectByProgramme($event.target.value)">
+      <ion-select-option *ngFor="let studentProgramme of programmesList"
+        [value]=studentProgramme>{{ studentProgramme }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-select label="Filter by Location" placeholder="Location" (ionChange)="getProjectByLocation($event.target.value)">
+      <ion-select-option *ngFor="let projectLocation of locationsList"
+        [value]=projectLocation>{{ projectLocation }}</ion-select-option>
+    </ion-select>
+  </ion-item>
+
     <ion-list>
       <ion-item *ngFor="let item of data" (click)="selectProject(item)">
         <ion-label>

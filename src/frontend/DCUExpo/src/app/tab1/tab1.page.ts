@@ -3,9 +3,10 @@ import { ApiHttpService } from '../services/api-http.service';
 import { Project } from '../models/project';
 import { ProjectService } from '../services/project.service';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
 import { technologies } from '../models/projectTechnologyList';
 import { areas } from '../models/projectAreaList';
+import { programmes } from '../models/studentProgrammeList';
+import { locations } from '../models/projectLocationList';
 
 @Component({
   selector: 'app-tab1',
@@ -18,9 +19,11 @@ export class Tab1Page {
   dataLoaded: boolean = false;
   technologiesList : any = technologies;
   areasList : any = areas;
+  programmesList : any = programmes;
+  locationsList : any = locations;
   searchString : string = "";
-  private _apiHttpService : ApiHttpService
-  private _projectService : ProjectService
+  private _apiHttpService : ApiHttpService;
+  private _projectService : ProjectService;
   
   constructor(apiHttpService : ApiHttpService, projectService : ProjectService,
     private router: Router) {
@@ -70,6 +73,26 @@ export class Tab1Page {
   getProjectByArea(area: string) {
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/projectarea/" + area
+    this._apiHttpService.get<Project>(url).subscribe((response: any) => {
+      this.dataLoaded = true;
+      this.data = response
+      console.log(response);
+    })
+  }
+
+  getProjectByProgramme(programme: string) {
+    this.dataLoaded = false;
+    var url = "https://localhost:7025/api/ExpoProject/studentprogramme/" + programme
+    this._apiHttpService.get<Project>(url).subscribe((response: any) => {
+      this.dataLoaded = true;
+      this.data = response
+      console.log(response);
+    })
+  }
+
+  getProjectByLocation(location: string) {
+    this.dataLoaded = false;
+    var url = "https://localhost:7025/api/ExpoProject/projectlocation/" + location
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
