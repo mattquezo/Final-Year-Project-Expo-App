@@ -1,7 +1,0 @@
-{
-  "name": "project-expo",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular-standalone"
-}
