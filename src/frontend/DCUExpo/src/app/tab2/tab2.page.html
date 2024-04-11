@@ -12,15 +12,23 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
+  
+  <div>
+    <ion-button (click)="selectMap('L101')">L101</ion-button>
+    <ion-button (click)="selectMap('L114')">L114</ion-button>
+    <ion-button (click)="selectMap('L125')">L125</ion-button>
+    <ion-button (click)="selectMap('L128')">L128</ion-button>
+    <ion-button (click)="selectMap('LG25')">LG25</ion-button>
+    <ion-button (click)="selectMap('LG26')">LG26</ion-button>
+    <ion-button (click)="selectMap('LG27')">LG27</ion-button>
+  </div>
 
-  <ion-searchbar></ion-searchbar>
-
-  <ion-button>
-    Button
-  </ion-button>
-
-  <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
-    Button
-  </button>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'L101'" [src]="'../assets/rooms/L101.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'L114'" [src]="'../assets/rooms/L114.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'L125'" [src]="'../assets/rooms/L125.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'L128'" [src]="'../assets/rooms/L128.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'LG25'" [src]="'../assets/rooms/LG25.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'LG26'" [src]="'../assets/rooms/LG26.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'LG27'" [src]="'../assets/rooms/LG27.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
 
 </ion-content>
