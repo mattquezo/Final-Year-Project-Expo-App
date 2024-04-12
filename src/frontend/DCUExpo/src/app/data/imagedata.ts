@@ -1315,10 +1315,129 @@ export var coordinatesLG26: ImageMapCoordinate[] = [
 
 export var coordinatesLG27: ImageMapCoordinate[] = [
   {
-    name: '173',
-    x: 24,
+    name: '53',
+    x: 14.5,
+    y: 82,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '54',
+    x: 44,
+    y: 82,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '55',
+    x: 59,
+    y: 82,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '56',
+    x: 73.5,
+    y: 82,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '57',
+    x: 86.5,
+    y: 82,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '58',
+    x: 73.5,
+    y: 51,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '59',
+    x: 60,
+    y: 51,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '60',
+    x: 31,
+    y: 51,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '61',
+    x: 16,
+    y: 51,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '62',
+    x: 31,
+    y: 33,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '63',
+    x: 45,
+    y: 33,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '64',
+    x: 73.5,
+    y: 33,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '65',
+    x: 87,
+    y: 33,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '66',
+    x: 73.5,
     y: 2,
     width: 11,
-    height: 8
+    height: 14
+  },
+  {
+    name: '67',
+    x: 60.5,
+    y: 2,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '68',
+    x: 33.5,
+    y: 2,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '69',
+    x: 20,
+    y: 2,
+    width: 11,
+    height: 14
+  },
+  {
+    name: '70',
+    x: 4.5,
+    y: 2,
+    width: 11,
+    height: 14
   }
 ]
