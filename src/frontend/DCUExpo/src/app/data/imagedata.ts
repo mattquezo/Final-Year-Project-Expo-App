@@ -1130,11 +1130,186 @@ export var coordinatesLG25: ImageMapCoordinate[] = [
 
 export var coordinatesLG26: ImageMapCoordinate[] = [
   {
-    name: '173',
-    x: 24,
+    name: '27',
+    x: 3,
     y: 2,
     width: 11,
-    height: 8
+    height: 10
+  },
+  {
+    name: '28',
+    x: 24.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '29',
+    x: 45.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '30',
+    x: 67.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '31',
+    x: 88,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '32',
+    x: 79,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '33',
+    x: 58,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '34',
+    x: 37,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '35',
+    x: 15.5,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '36',
+    x: 15.5,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '37',
+    x: 37,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '38',
+    x: 58,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '39',
+    x: 79,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '40',
+    x: 88,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '41',
+    x: 68,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '42',
+    x: 47.5,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '43',
+    x: 26,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '44',
+    x: 15.5,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '45',
+    x: 37,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '46',
+    x: 58,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '47',
+    x: 79,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '48',
+    x: 88,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '49',
+    x: 67.5,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '50',
+    x: 45.5,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '51',
+    x: 24.5,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '52',
+    x: 3,
+    y: 87,
+    width: 11,
+    height: 10
   }
 ]
 
