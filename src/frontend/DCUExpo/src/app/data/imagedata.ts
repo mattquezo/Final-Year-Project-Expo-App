@@ -945,11 +945,186 @@ export var coordinatesL128: ImageMapCoordinate[] = [
 
 export var coordinatesLG25: ImageMapCoordinate[] = [
   {
-    name: '173',
-    x: 24,
+    name: '1',
+    x: 3,
     y: 2,
     width: 11,
-    height: 8
+    height: 10
+  },
+  {
+    name: '2',
+    x: 24.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '3',
+    x: 45.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '4',
+    x: 67.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '5',
+    x: 88,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '6',
+    x: 79,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '7',
+    x: 58,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '8',
+    x: 37,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '9',
+    x: 15.5,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '10',
+    x: 15.5,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '11',
+    x: 37,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '12',
+    x: 58,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '13',
+    x: 79,
+    y: 33,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '14',
+    x: 88,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '15',
+    x: 68,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '16',
+    x: 47.5,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '17',
+    x: 26,
+    y: 52,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '18',
+    x: 15.5,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '19',
+    x: 37,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '20',
+    x: 58,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '21',
+    x: 79,
+    y: 63,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '22',
+    x: 88,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '23',
+    x: 67.5,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '24',
+    x: 45.5,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '25',
+    x: 24.5,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '26',
+    x: 3,
+    y: 87,
+    width: 11,
+    height: 10
   }
 ]
 
