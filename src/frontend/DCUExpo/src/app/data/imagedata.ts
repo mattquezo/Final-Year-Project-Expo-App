@@ -730,6 +730,216 @@ export var coordinatesL128: ImageMapCoordinate[] = [
     y: 2,
     width: 11,
     height: 10
+  },
+  {
+    name: '72',
+    x: 28,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '73',
+    x: 40,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '74',
+    x: 52,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '75',
+    x: 63.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '76',
+    x: 75,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '77',
+    x: 86.5,
+    y: 2,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '78',
+    x: 75,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '79',
+    x: 63.5,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '80',
+    x: 52,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '81',
+    x: 28,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '82',
+    x: 16,
+    y: 22,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '83',
+    x: 16,
+    y: 32,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '84',
+    x: 40,
+    y: 32,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '85',
+    x: 63.5,
+    y: 32,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '86',
+    x: 86.5,
+    y: 32,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '87',
+    x: 75,
+    y: 53,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '88',
+    x: 63.5,
+    y: 53,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '89',
+    x: 52,
+    y: 53,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '90',
+    x: 28,
+    y: 53,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '91',
+    x: 16,
+    y: 53,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '92',
+    x: 16,
+    y: 65,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '93',
+    x: 40,
+    y: 65,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '94',
+    x: 63.5,
+    y: 65,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '95',
+    x: 86.5,
+    y: 65,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '96',
+    x: 75,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '97',
+    x: 63.5,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '98',
+    x: 40,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '99',
+    x: 28,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '100',
+    x: 16,
+    y: 87,
+    width: 11,
+    height: 10
+  },
+  {
+    name: '101',
+    x: 4,
+    y: 87,
+    width: 11,
+    height: 10
   }
 ]
 
