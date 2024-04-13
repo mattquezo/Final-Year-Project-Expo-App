@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { ApiHttpService } from '../services/api-http.service';
 import { Project } from '../models/project';
 import { ProjectService } from '../services/project.service';
@@ -7,6 +7,7 @@ import { technologies } from '../models/projectTechnologyList';
 import { areas } from '../models/projectAreaList';
 import { programmes } from '../models/studentProgrammeList';
 import { locations } from '../models/projectLocationList';
+import { IonAccordionGroup } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -31,6 +32,8 @@ export class Tab1Page {
     this._projectService = projectService
   }
 
+  @ViewChild('accordionGroup', { static: true }) accordionGroup: IonAccordionGroup;
+
   // handleSearch() {
   //   var url = "https://localhost:7025/api/ExpoProject/projectarea/" + this.searchString
   //   this._apiHttpService.get<Project[]>(url).subscribe((response: any) => {
@@ -40,8 +43,17 @@ export class Tab1Page {
   // }
 
   ionViewWillEnter() {
-    //this.getProject();
+    this.getProject();
   }
+
+  toggleAccordion = () => {
+    const nativeEl = this.accordionGroup;
+    if (nativeEl.value === 'filter') {
+      nativeEl.value = undefined;
+    } else {
+      nativeEl.value = 'filter';
+    }
+  };
 
   selectProject(item: Project) {
     console.log(item);
@@ -60,6 +72,7 @@ export class Tab1Page {
   }
 
   getProjectByTechnology(technology: string) {
+    this.toggleAccordion();
     console.log(technology);
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/projecttechnology/" + technology
@@ -71,6 +84,7 @@ export class Tab1Page {
   }
 
   getProjectByArea(area: string) {
+    this.toggleAccordion();
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/projectarea/" + area
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
@@ -81,6 +95,7 @@ export class Tab1Page {
   }
 
   getProjectByProgramme(programme: string) {
+    this.toggleAccordion();
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/studentprogramme/" + programme
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
@@ -91,6 +106,7 @@ export class Tab1Page {
   }
 
   getProjectByLocation(location: string) {
+    this.toggleAccordion();
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/projectlocation/" + location
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {

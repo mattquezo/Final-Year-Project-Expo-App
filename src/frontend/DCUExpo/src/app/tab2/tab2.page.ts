@@ -72,6 +72,14 @@ export class Tab2Page {
     this._mapService = mapService
   }
 
+  setMode(mode: string){
+    this.mode = mode
+
+    if(mode == 'Map Select'){
+      this.selectedMap = 'None'
+    }
+  }
+
   selectProjectId(id: string) {
     console.log(id);
     this._projectService.assignProjectId(parseInt(id));

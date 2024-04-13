@@ -12,8 +12,10 @@
       <ion-title size="large">Tab 2</ion-title>
     </ion-toolbar>
   </ion-header>
-  
-  <div>
+  <ion-item>
+    <ion-icon *ngIf="mode == 'Map'" name="arrow-back" (click)="setMode('Map Select')">
+    </ion-icon>{{selectedMap == 'None' ? "Select Map" : 'Room ' + selectedMap}}</ion-item>
+  <div *ngIf="mode == 'Map Select'">
     <ion-button (click)="selectMap('L101')">L101</ion-button>
     <ion-button (click)="selectMap('L114')">L114</ion-button>
     <ion-button (click)="selectMap('L125')">L125</ion-button>
