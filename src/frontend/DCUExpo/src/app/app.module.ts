@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ImageMapComponent } from './image-map/image-map.component';
+import { NgxSpinnerComponent } from 'ngx-spinner';
 
 @NgModule({
   declarations: [AppComponent],

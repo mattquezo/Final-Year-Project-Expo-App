@@ -9,13 +9,13 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="large">Map</ion-title>
     </ion-toolbar>
   </ion-header>
   <ion-item>
     <ion-icon *ngIf="mode == 'Map'" name="arrow-back" (click)="setMode('Map Select')">
-    </ion-icon>{{selectedMap == 'None' ? "Select Map" : 'Room ' + selectedMap}}</ion-item>
-  <div *ngIf="mode == 'Map Select'">
+    </ion-icon>{{selectedMap == 'None' ? "Select Room" : 'Room ' + selectedMap}}</ion-item>
+  <ion-item *ngIf="mode == 'Map Select'">
     <ion-button (click)="selectMap('L101')">L101</ion-button>
     <ion-button (click)="selectMap('L114')">L114</ion-button>
     <ion-button (click)="selectMap('L125')">L125</ion-button>
@@ -23,7 +23,7 @@
     <ion-button (click)="selectMap('LG25')">LG25</ion-button>
     <ion-button (click)="selectMap('LG26')">LG26</ion-button>
     <ion-button (click)="selectMap('LG27')">LG27</ion-button>
-  </div>
+  </ion-item>
 
   <image-map *ngIf="mode == 'Map' && selectedMap == 'L101'" [src]="'../assets/rooms/L101.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
   <image-map *ngIf="mode == 'Map' && selectedMap == 'L114'" [src]="'../assets/rooms/L114.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>

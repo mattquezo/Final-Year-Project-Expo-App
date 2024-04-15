@@ -5,3 +5,19 @@
 .new-text{
     --ion-text-color: red;
 }
+
+ion-item.projectitem {
+    --background: var(--ion-color-primary);
+
+    margin: 2% 4%;
+    border-radius: 10px;
+
+    h2 {
+        color: white;
+    }
+}
+
+ion-spinner {
+    display: flex;
+    margin: center;
+}

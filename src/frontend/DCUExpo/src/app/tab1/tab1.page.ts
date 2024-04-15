@@ -8,6 +8,7 @@ import { areas } from '../models/projectAreaList';
 import { programmes } from '../models/studentProgrammeList';
 import { locations } from '../models/projectLocationList';
 import { IonAccordionGroup } from '@ionic/angular';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-tab1',
@@ -27,7 +28,8 @@ export class Tab1Page {
   private _projectService : ProjectService;
   
   constructor(apiHttpService : ApiHttpService, projectService : ProjectService,
-    private router: Router) {
+    private router: Router,
+    private spinner: NgxSpinnerService) {
     this._apiHttpService = apiHttpService
     this._projectService = projectService
   }
@@ -43,7 +45,10 @@ export class Tab1Page {
   // }
 
   ionViewWillEnter() {
-    this.getProject();
+    if(!this.dataLoaded)
+      {
+        this.getProject();
+      }
   }
 
   toggleAccordion = () => {
@@ -63,15 +68,18 @@ export class Tab1Page {
 
   getProject() {
     this.dataLoaded = false;
+    this.spinner.show();
     var url = "https://localhost:7025/api/ExpoProject"
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
+      this.spinner.hide();
       console.log(response);
     })
   }
 
   getProjectByTechnology(technology: string) {
+    this.spinner.show();
     this.toggleAccordion();
     console.log(technology);
     this.dataLoaded = false;
@@ -79,39 +87,46 @@ export class Tab1Page {
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
+      this.spinner.hide();
       console.log(response);
     })
   }
 
   getProjectByArea(area: string) {
+    this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/projectarea/" + area
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
+      this.spinner.hide();
       console.log(response);
     })
   }
 
   getProjectByProgramme(programme: string) {
+    this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/studentprogramme/" + programme
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
+      this.spinner.hide();
       console.log(response);
     })
   }
 
   getProjectByLocation(location: string) {
+    this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
     var url = "https://localhost:7025/api/ExpoProject/projectlocation/" + location
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
+      this.spinner.hide();
       console.log(response);
     })
   }

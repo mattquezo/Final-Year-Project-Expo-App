@@ -76,7 +76,7 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -242,3 +242,12 @@ html {
    */
   --ion-dynamic-font: var(--ion-default-dynamic-font);
 }
+
+@font-face {
+  font-family: 'AppFont';
+  src: url(../assets/fonts/Nunito-VariableFont_wght.ttf); //change url accordingly
+  }
+  
+  :root {
+    --ion-font-family: 'AppFont';
+  }

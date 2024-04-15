@@ -20,12 +20,17 @@ export class Tab3Page {
     this._projectService = projectService
   }
 
+  selectedId = -1;
+
   ionViewWillEnter() {
+    var selectId = this._projectService.getSelectedProjectId();
+    this.selectedId = selectId;
     this.getProject();
   }
 
   getProject() {
     var selectId = this._projectService.getSelectedProjectId();
+    this.selectedId = selectId
     if (selectId > -1) {
       var url = "https://localhost:7025/api/ExpoProject/projectid/" + selectId;
       this._apiHttpService.get<Project>(url).subscribe((response: any) => {
