@@ -36,7 +36,6 @@ export class Tab1Page {
 
   @ViewChild('accordionGroup', { static: true }) accordionGroup: IonAccordionGroup;
 
-  // Test commit
   // handleSearch() {
   //   var url = "https://localhost:7025/api/ExpoProject/projectarea/" + this.searchString
   //   this._apiHttpService.get<Project[]>(url).subscribe((response: any) => {
