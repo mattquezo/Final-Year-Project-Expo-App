@@ -7,6 +7,7 @@ export class MapService {
 
   selectedMap : string = "None";
   mode : string = "Map Select"
+  coordinates: any = null;
 
   constructor() { }
 
