@@ -32,6 +32,16 @@ export class Tab2Page {
     this.selectProjectId(coordinate.name!);
   }
 
+  ionViewWillEnter() {
+    if(this._mapService.getMode() == "Map")
+      {
+        this.selectedMap = this._mapService.getSelectedMap();
+        this.setMode('Map')
+        this.coordinates = this._mapService.coordinates;
+      }
+  }
+
+
   selectMap(selectedMap: string){
     this._mapService.setSelectedMap(selectedMap);
     this.selectedMap = selectedMap;
@@ -83,6 +93,7 @@ export class Tab2Page {
   selectProjectId(id: string) {
     console.log(id);
     this._projectService.assignProjectId(parseInt(id));
+    this._mapService.coordinates = null;
     this.router.navigateByUrl('/tabs/tab3');
   }
 

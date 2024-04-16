@@ -14,8 +14,12 @@
   </ion-header>
   <ion-item>
     <ion-icon *ngIf="mode == 'Map'" name="arrow-back" (click)="setMode('Map Select')">
-    </ion-icon>{{selectedMap == 'None' ? "Select Room" : 'Room ' + selectedMap}}</ion-item>
-  <ion-item *ngIf="mode == 'Map Select'">
+    </ion-icon>
+    <ion-label class="roomTitle">{{selectedMap == 'None' ? "Select Room" : selectedMap}}</ion-label>
+    </ion-item>
+  <ion-list class="mapList" style="text-align: center;;" *ngIf="mode == 'Map Select'">
+    <ion-button (click)="selectMap('Ground Floor')">Ground Floor</ion-button>
+    <ion-button (click)="selectMap('First Floor')">First Floor</ion-button>
     <ion-button (click)="selectMap('L101')">L101</ion-button>
     <ion-button (click)="selectMap('L114')">L114</ion-button>
     <ion-button (click)="selectMap('L125')">L125</ion-button>
@@ -23,8 +27,11 @@
     <ion-button (click)="selectMap('LG25')">LG25</ion-button>
     <ion-button (click)="selectMap('LG26')">LG26</ion-button>
     <ion-button (click)="selectMap('LG27')">LG27</ion-button>
-  </ion-item>
+  </ion-list>
 
+  <ion-item class="imagemap">
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'Ground Floor'" [src]="'../assets/rooms/ground-floor-layout.png'" [coordinates]="" (onClick)="getClick($event)"></image-map>
+  <image-map *ngIf="mode == 'Map' && selectedMap == 'First Floor'" [src]="'../assets/rooms/first-floor-layout.png'" [coordinates]="" (onClick)="getClick($event)"></image-map>
   <image-map *ngIf="mode == 'Map' && selectedMap == 'L101'" [src]="'../assets/rooms/L101.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
   <image-map *ngIf="mode == 'Map' && selectedMap == 'L114'" [src]="'../assets/rooms/L114.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
   <image-map *ngIf="mode == 'Map' && selectedMap == 'L125'" [src]="'../assets/rooms/L125.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
@@ -32,5 +39,6 @@
   <image-map *ngIf="mode == 'Map' && selectedMap == 'LG25'" [src]="'../assets/rooms/LG25.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
   <image-map *ngIf="mode == 'Map' && selectedMap == 'LG26'" [src]="'../assets/rooms/LG26.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
   <image-map *ngIf="mode == 'Map' && selectedMap == 'LG27'" [src]="'../assets/rooms/LG27.png'" [coordinates]="coordinates" (onClick)="getClick($event)"></image-map>
+</ion-item>
 
 </ion-content>

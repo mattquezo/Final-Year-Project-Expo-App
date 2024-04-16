@@ -1,4 +1,22 @@
 ion-item.input-wrapper {
-    margin: auto;
+  margin: auto;
   display: grid;
+}
+
+.mapList {
+  ion-button {
+    width: 75%;
+    margin: 5% 0%;
+  }
+}
+
+.roomTitle {
+  display: flex;
+  justify-content: center;
+  width: 200px;
+}
+
+.center {
+  display: block;
+  margin: auto;
 }
