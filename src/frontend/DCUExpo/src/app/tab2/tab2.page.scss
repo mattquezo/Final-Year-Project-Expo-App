@@ -5,6 +5,11 @@ ion-item.input-wrapper {
 
 .mapList {
   ion-button {
+    --background: white;
+    --color: #0081a5;
+    --border-style: solid;
+    --border-color: #0081a5;
+    --border-width: 1px;
     width: 75%;
     margin: 5% 0%;
   }

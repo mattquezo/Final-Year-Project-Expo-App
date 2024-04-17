@@ -18,15 +18,15 @@
     <ion-label class="roomTitle">{{selectedMap == 'None' ? "Select Room" : selectedMap}}</ion-label>
     </ion-item>
   <ion-list class="mapList" style="text-align: center;;" *ngIf="mode == 'Map Select'">
-    <ion-button (click)="selectMap('Ground Floor')">Ground Floor</ion-button>
-    <ion-button (click)="selectMap('First Floor')">First Floor</ion-button>
-    <ion-button (click)="selectMap('L101')">L101</ion-button>
-    <ion-button (click)="selectMap('L114')">L114</ion-button>
-    <ion-button (click)="selectMap('L125')">L125</ion-button>
-    <ion-button (click)="selectMap('L128')">L128</ion-button>
-    <ion-button (click)="selectMap('LG25')">LG25</ion-button>
-    <ion-button (click)="selectMap('LG26')">LG26</ion-button>
-    <ion-button (click)="selectMap('LG27')">LG27</ion-button>
+    <ion-button shape="round" (click)="selectMap('Ground Floor')">Ground Floor</ion-button>
+    <ion-button shape="round" (click)="selectMap('First Floor')">First Floor</ion-button>
+    <ion-button shape="round" (click)="selectMap('L101')">L101</ion-button>
+    <ion-button shape="round" (click)="selectMap('L114')">L114</ion-button>
+    <ion-button shape="round" (click)="selectMap('L125')">L125</ion-button>
+    <ion-button shape="round" (click)="selectMap('L128')">L128</ion-button>
+    <ion-button shape="round" (click)="selectMap('LG25')">LG25</ion-button>
+    <ion-button shape="round" (click)="selectMap('LG26')">LG26</ion-button>
+    <ion-button shape="round" (click)="selectMap('LG27')">LG27</ion-button>
   </ion-list>
 
   <ion-item class="imagemap">

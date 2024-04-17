@@ -251,3 +251,7 @@ html {
   :root {
     --ion-font-family: 'AppFont';
   }
+
+ion-tab-button.tab-selected {
+  color: #0081a5;
+}
