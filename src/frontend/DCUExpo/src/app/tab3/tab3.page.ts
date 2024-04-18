@@ -6,6 +6,7 @@ import { MapService } from '../services/map.service';
 import { coordinatesL101,coordinatesL125,coordinatesL114,coordinatesL128, 
   coordinatesLG25, coordinatesLG26, coordinatesLG27 } from '../data/imagedata';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-tab3',
@@ -21,7 +22,7 @@ export class Tab3Page {
   private _mapService: MapService
   
   constructor(apiHttpService: ApiHttpService, projectService: ProjectService, mapService: MapService, 
-    private router: Router) {
+    private router: Router, private spinner: NgxSpinnerService) {
     this._apiHttpService = apiHttpService
     this._projectService = projectService
     this._mapService = mapService
@@ -103,15 +104,21 @@ export class Tab3Page {
   }
 
   getProject() {
+    this.spinner.show();
     var selectId = this._projectService.getSelectedProjectId();
     this.selectedId = selectId
     if (selectId > -1) {
-      var url = "https://localhost:7025/api/ExpoProject/projectid/" + selectId;
+      var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/projectid/" + selectId;
       this._apiHttpService.get<Project>(url).subscribe((response: any) => {
         this.data = response
         console.log(response);
         this.selectedProjectRoom = (response.projectLocation);
+        this.spinner.hide();
       })
+    }
+    else
+    {
+      this.spinner.hide();
     }
   }
 }

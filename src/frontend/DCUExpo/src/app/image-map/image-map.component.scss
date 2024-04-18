@@ -6,7 +6,7 @@
   left: 0;
 
   .area {
-    border: 3px solid blue;
+    border: 3px solid #0081a5;
     position: absolute;
     cursor: pointer;
     transition: all 0.1s;
@@ -14,6 +14,7 @@
       border: 2px solid lightgray;
       box-shadow: 0 0px 5px darkgray;
     }
+    border-radius: 6px;
   }
 }
 

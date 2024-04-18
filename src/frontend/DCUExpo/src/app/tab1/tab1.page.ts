@@ -7,7 +7,7 @@ import { technologies } from '../models/projectTechnologyList';
 import { areas } from '../models/projectAreaList';
 import { programmes } from '../models/studentProgrammeList';
 import { locations } from '../models/projectLocationList';
-import { IonAccordionGroup } from '@ionic/angular';
+import { IonAccordionGroup, IonSelect } from '@ionic/angular';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
@@ -16,6 +16,15 @@ import { NgxSpinnerService } from 'ngx-spinner';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+
+  // refer to the select via the template reference
+@ViewChild('area', { static: false }) area: IonSelect | undefined;
+// refer to the select via the template reference
+@ViewChild('technology', { static: false }) technology: IonSelect | undefined;
+// refer to the select via the template reference
+@ViewChild('location', { static: false }) location: IonSelect | undefined;
+// refer to the select via the template reference
+@ViewChild('programme', { static: false }) programme: IonSelect | undefined;
 
   data : any;
   dataLoaded: boolean = false;
@@ -52,6 +61,13 @@ export class Tab1Page {
     }
   };
 
+  resetFilter(){
+    this.area!.value = "";
+    this.location!.value = "";
+    this.technology!.value = "";
+    this.programme!.value = "";
+  }
+
   selectProject(item: Project) {
     console.log(item);
     this._projectService.assignProjectId(item.projectId);
@@ -61,7 +77,7 @@ export class Tab1Page {
   getProject() {
     this.dataLoaded = false;
     this.spinner.show();
-    var url = "https://localhost:7025/api/ExpoProject"
+    var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject"
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
@@ -71,11 +87,14 @@ export class Tab1Page {
   }
 
   getProjectByTechnology(technology: string) {
+    this.resetFilter();
+    this.technology!.value = technology;
+    this.searchString = technology;
     this.spinner.show();
     this.toggleAccordion();
     console.log(technology);
     this.dataLoaded = false;
-    var url = "https://localhost:7025/api/ExpoProject/projecttechnology/" + technology
+    var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/projecttechnology/" + technology
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
@@ -85,10 +104,12 @@ export class Tab1Page {
   }
 
   getProjectByArea(area: string) {
+    this.resetFilter();
     this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
-    var url = "https://localhost:7025/api/ExpoProject/projectarea/" + area
+    this.area!.value = area;
+    var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/projectarea/" + area
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
@@ -98,10 +119,13 @@ export class Tab1Page {
   }
 
   getProjectByProgramme(programme: string) {
+    this.resetFilter();
+    this.searchString = programme;
     this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
-    var url = "https://localhost:7025/api/ExpoProject/studentprogramme/" + programme
+    this.programme!.value = programme;
+    var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/studentprogramme/" + programme
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
@@ -111,10 +135,13 @@ export class Tab1Page {
   }
 
   getProjectByLocation(location: string) {
+    this.resetFilter();
+    this.searchString = location;
     this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
-    var url = "https://localhost:7025/api/ExpoProject/projectlocation/" + location
+    this.location!.value = location;
+    var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/projectlocation/" + location
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response

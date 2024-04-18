@@ -7,6 +7,7 @@ import { ExploreContainerComponentModule } from '../explore-container/explore-co
 
 import { Tab2PageRoutingModule } from './tab2-routing.module';
 import { ImageMapComponent } from '../image-map/image-map.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { ImageMapComponent } from '../image-map/image-map.component';
     CommonModule,
     FormsModule,
     ExploreContainerComponentModule,
-    Tab2PageRoutingModule
+    Tab2PageRoutingModule,
+    NgxSpinnerModule
   ],
   declarations: [Tab2Page, ImageMapComponent]
 })

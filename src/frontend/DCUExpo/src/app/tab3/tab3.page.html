@@ -61,5 +61,7 @@
 
   <ion-content *ngIf="selectedId == -1" class="warning-container"><h3 class="no-project-warning">No project selected <br><br>
     Please go back to the project list page to select a project</h3></ion-content>
-
+    <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-pulse">
+      <p style="font-size: 20px; color: white">Loading...</p>
+    </ngx-spinner>
 </ion-content>

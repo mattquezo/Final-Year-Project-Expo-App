@@ -8,6 +8,7 @@ import { coordinatesL101,coordinatesL125,coordinatesL114,coordinatesL128,
   coordinatesLG25, coordinatesLG26, coordinatesLG27 } from '../data/imagedata';
 import { MapService } from '../services/map.service';
 import { map } from 'rxjs';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-tab2',
@@ -28,6 +29,10 @@ export class Tab2Page {
   private _mapService: MapService;
 
   getClick(coordinate: ImageMapCoordinate) {
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 3000);
     console.log(`Clicked on ${coordinate.name}`)
     this.selectProjectId(coordinate.name!);
   }
@@ -38,11 +43,16 @@ export class Tab2Page {
         this.selectedMap = this._mapService.getSelectedMap();
         this.setMode('Map')
         this.coordinates = this._mapService.coordinates;
+        this.spinner.hide();
       }
   }
 
 
   selectMap(selectedMap: string){
+    this.spinner.show();
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 2000);
     this._mapService.setSelectedMap(selectedMap);
     this.selectedMap = selectedMap;
     this.mode = "Map";
@@ -76,7 +86,7 @@ export class Tab2Page {
   }
 
   constructor(apiHttpService : ApiHttpService, projectService : ProjectService, mapService: MapService,
-    private router: Router) {
+    private router: Router, private spinner: NgxSpinnerService) {
     this._apiHttpService = apiHttpService
     this._projectService = projectService
     this._mapService = mapService

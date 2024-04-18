@@ -17,17 +17,18 @@
     <ion-accordion value="filters">
       <ion-item slot="header" color="light">
         <ion-label>Filters</ion-label>
+        <ion-label class="header-center">{{searchString}}</ion-label>
       </ion-item>
       <div slot="content">
         <ion-item>
-          <ion-select label="Filter by Area" placeholder="Area" (ionChange)="getProjectByArea($event.target.value)">
+          <ion-select #area label="Filter by Area" placeholder="Area" (ionChange)="getProjectByArea($event.target.value)">
             <ion-select-option *ngFor="let projectArea of areasList" [value]=projectArea>{{ projectArea
               }}</ion-select-option>
           </ion-select>
         </ion-item>
 
         <ion-item>
-          <ion-select label="Filter by Technology" placeholder="Technology"
+          <ion-select #technology label="Filter by Technology" placeholder="Technology"
             (ionChange)="getProjectByTechnology($event.target.value)">
             <ion-select-option *ngFor="let projectTech of technologiesList" [value]=projectTech>{{ projectTech
               }}</ion-select-option>
@@ -35,7 +36,7 @@
         </ion-item>
 
         <ion-item>
-          <ion-select label="Filter by Programme" placeholder="Programme"
+          <ion-select #programme label="Filter by Programme" placeholder="Programme"
             (ionChange)="getProjectByProgramme($event.target.value)">
             <ion-select-option *ngFor="let studentProgramme of programmesList" [value]=studentProgramme>{{
               studentProgramme
@@ -44,7 +45,7 @@
         </ion-item>
 
         <ion-item>
-          <ion-select label="Filter by Location" placeholder="Location"
+          <ion-select #location label="Filter by Location" placeholder="Location"
             (ionChange)="getProjectByLocation($event.target.value)">
             <ion-select-option *ngFor="let projectLocation of locationsList" [value]=projectLocation>{{ projectLocation
               }}</ion-select-option>
