@@ -24,7 +24,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "swagger",
-      "applicationUrl": "https://localhost:7025;http://localhost:5124",
+      "applicationUrl": "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com;http://localhost:5124",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
