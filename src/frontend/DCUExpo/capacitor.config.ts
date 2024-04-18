@@ -5,7 +5,11 @@ const config: CapacitorConfig = {
   appName: 'DCUExpo',
   webDir: 'www',
   server: {
-    androidScheme: 'https'
+    androidScheme: 'http',
+    allowNavigation: []
+  },
+  android: {
+    allowMixedContent: true
   }
 };
 
