@@ -83,7 +83,7 @@ export class Tab1Page {
       this.data = response
       this.spinner.hide();
       console.log(response);
-    })
+    },(error) => alert(error.message))
   }
 
   getProjectByTechnology(technology: string) {
