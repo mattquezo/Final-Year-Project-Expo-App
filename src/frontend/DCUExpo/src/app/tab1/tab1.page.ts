@@ -109,6 +109,7 @@ export class Tab1Page {
     this.toggleAccordion();
     this.dataLoaded = false;
     this.area!.value = area;
+    this.searchString = area;
     var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/projectarea/" + area
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
