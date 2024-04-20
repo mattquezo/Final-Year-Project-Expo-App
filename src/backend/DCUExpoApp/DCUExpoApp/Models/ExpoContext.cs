@@ -7,12 +7,14 @@ namespace DCUExpoApp.Models
 {
     public class ExpoContext : DbContext
     {
-        public DbSet<ExpoProject> Projects { get; set; }
-        public DbSet<ProjectStudent> Students { get; set; }
 
-        public DbSet<ProjectArea> ProjectAreas { get; set; }
-        public DbSet<ProjectTechnology> ProjectTechnologies { get; set; }
-        public DbSet<StudentProgramme> StudentProgrammes { get; set; }
+        public ExpoContext() { }
+        public virtual DbSet<ExpoProject> Projects { get; set; }
+        public virtual DbSet<ProjectStudent> Students { get; set; }
+
+        public virtual DbSet<ProjectArea> ProjectAreas { get; set; }
+        public virtual DbSet<ProjectTechnology> ProjectTechnologies { get; set; }
+        public virtual DbSet<StudentProgramme> StudentProgrammes { get; set; }
 
         protected readonly IConfiguration Configuration;
 
