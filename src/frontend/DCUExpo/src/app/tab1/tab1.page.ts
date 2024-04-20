@@ -43,7 +43,7 @@ export class Tab1Page {
     this._projectService = projectService
   }
 
-  @ViewChild('accordionGroup', { static: true }) accordionGroup: IonAccordionGroup;
+  @ViewChild('accordionGroup', { static: true }) accordionGroup: IonAccordionGroup|undefined;
 
   ionViewWillEnter() {
     if(!this.dataLoaded)
@@ -54,10 +54,10 @@ export class Tab1Page {
 
   toggleAccordion = () => {
     const nativeEl = this.accordionGroup;
-    if (nativeEl.value === 'filter') {
-      nativeEl.value = undefined;
+    if (nativeEl!.value === 'filter') {
+      nativeEl!.value = undefined;
     } else {
-      nativeEl.value = 'filter';
+      nativeEl!.value = 'filter';
     }
   };
 
@@ -105,11 +105,11 @@ export class Tab1Page {
 
   getProjectByArea(area: string) {
     this.resetFilter();
+    this.area!.value = area;
+    this.searchString = area;
     this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
-    this.area!.value = area;
-    this.searchString = area;
     var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/projectarea/" + area
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
@@ -137,11 +137,11 @@ export class Tab1Page {
 
   getProjectByLocation(location: string) {
     this.resetFilter();
+    this.location!.value = location;
     this.searchString = location;
     this.spinner.show();
     this.toggleAccordion();
     this.dataLoaded = false;
-    this.location!.value = location;
     var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject/projectlocation/" + location
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
