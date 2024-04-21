@@ -1,5 +1,7 @@
 import { ImageMapCoordinate } from "../image-map/image-map.component"
 
+// Each project is coordinated in each room
+// L101 Projects
 export var coordinatesL101: ImageMapCoordinate[] = [
   {
     name: '173',
@@ -220,6 +222,7 @@ export var coordinatesL101: ImageMapCoordinate[] = [
   }
 ]
 
+// L114 Projects
 export var coordinatesL114: ImageMapCoordinate[] = [
   {
     name: '143',
@@ -433,6 +436,7 @@ export var coordinatesL114: ImageMapCoordinate[] = [
   }
 ]
 
+// L125 Projects
 export var coordinatesL125: ImageMapCoordinate[] = [
   {
     name: '102',
@@ -723,6 +727,7 @@ export var coordinatesL125: ImageMapCoordinate[] = [
   },
 ]
 
+// L128 Projects
 export var coordinatesL128: ImageMapCoordinate[] = [
   {
     name: '71',
@@ -943,6 +948,7 @@ export var coordinatesL128: ImageMapCoordinate[] = [
   }
 ]
 
+// LG25 Projects
 export var coordinatesLG25: ImageMapCoordinate[] = [
   {
     name: '1',
@@ -1128,6 +1134,7 @@ export var coordinatesLG25: ImageMapCoordinate[] = [
   }
 ]
 
+// LG26 Projects
 export var coordinatesLG26: ImageMapCoordinate[] = [
   {
     name: '27',
@@ -1313,6 +1320,7 @@ export var coordinatesLG26: ImageMapCoordinate[] = [
   }
 ]
 
+// LG27 Projects
 export var coordinatesLG27: ImageMapCoordinate[] = [
   {
     name: '53',

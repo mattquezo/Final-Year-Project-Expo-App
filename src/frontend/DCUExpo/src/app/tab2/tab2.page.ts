@@ -3,11 +3,9 @@ import { ImageMapCoordinate } from '../image-map/image-map.component';
 import { ApiHttpService } from '../services/api-http.service';
 import { ProjectService } from '../services/project.service';
 import { Router } from '@angular/router';
-import { Project } from '../models/project';
 import { coordinatesL101,coordinatesL125,coordinatesL114,coordinatesL128, 
   coordinatesLG25, coordinatesLG26, coordinatesLG27 } from '../data/imagedata';
 import { MapService } from '../services/map.service';
-import { map } from 'rxjs';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
@@ -28,6 +26,7 @@ export class Tab2Page {
   private _projectService: ProjectService;
   private _mapService: MapService;
 
+  // Spinner will load when selecting a project
   getClick(coordinate: ImageMapCoordinate) {
     this.spinner.show();
     setTimeout(() => {
@@ -37,6 +36,7 @@ export class Tab2Page {
     this.selectProjectId(coordinate.name!);
   }
 
+  // On start up, Select Map state will load, displaying list of rooms
   ionViewWillEnter() {
     if(this._mapService.getMode() == "Map")
       {
@@ -48,6 +48,7 @@ export class Tab2Page {
   }
 
 
+  // Selecting a map will activate spinner for 2 seconds
   selectMap(selectedMap: string){
     this.spinner.show();
     setTimeout(() => {
@@ -57,6 +58,8 @@ export class Tab2Page {
     this.selectedMap = selectedMap;
     this.mode = "Map";
     console.log(selectedMap);
+
+    // Switch case for whichever room was selected
     switch (selectedMap){
       case "L101":
         this.coordinates = coordinatesL101;
@@ -92,6 +95,7 @@ export class Tab2Page {
     this._mapService = mapService
   }
 
+  // Sets the state of the map tab
   setMode(mode: string){
     this.mode = mode
 
@@ -100,6 +104,7 @@ export class Tab2Page {
     }
   }
 
+  // When project is selected, it will redirect to details tab
   selectProjectId(id: string) {
     console.log(id);
     this._projectService.assignProjectId(parseInt(id));

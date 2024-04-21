@@ -28,15 +28,18 @@ export class Tab3Page {
     this._mapService = mapService
   }
 
+  // No project selected state
   selectedId = -1;
   selectedProjectRoom = "";
 
+  // On startup, if selectedID is -1, display warning, else if a project is selected, display project details
   ionViewWillEnter() {
     var selectId = this._projectService.getSelectedProjectId();
     this.selectedId = selectId;
     this.getProject();
   }
 
+  // Map button which highlights the location of a project on its map
   showOnMap(){
     this._mapService.setMode("Map");
     this._mapService.setSelectedMap(this.selectedProjectRoom);
@@ -44,9 +47,9 @@ export class Tab3Page {
     switch (this.selectedProjectRoom){
       case "L101":
         coordinatesL101.forEach(element => {
-          if(parseInt(element.name!) == this.selectedId)
+          if(parseInt(element.name!) == this.selectedId)  // loop through projects in L101
             {
-              this._mapService.coordinates = [element];
+              this._mapService.coordinates = [element];  // if it matches the project's, highlight it on the map
             } 
         });
         break;

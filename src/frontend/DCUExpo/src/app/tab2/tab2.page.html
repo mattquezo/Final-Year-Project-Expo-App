@@ -12,11 +12,14 @@
       <ion-title size="large">Map</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <!-- Select Map state -->
   <ion-item>
     <ion-icon *ngIf="mode == 'Map'" name="arrow-back" (click)="setMode('Map Select')">
     </ion-icon>
     <ion-label class="roomTitle">{{selectedMap == 'None' ? "Select Room" : selectedMap}}</ion-label>
-    </ion-item>
+  </ion-item>
+
   <ion-list class="mapList" style="text-align: center;;" *ngIf="mode == 'Map Select'">
     <ion-button shape="round" (click)="selectMap('Ground Floor')">Ground Floor</ion-button>
     <ion-button shape="round" (click)="selectMap('First Floor')">First Floor</ion-button>
@@ -29,6 +32,7 @@
     <ion-button shape="round" (click)="selectMap('L101')">L101</ion-button>
   </ion-list>
 
+  <!-- When room selected, go to map state, displaying the room map the user has selected -->
   <ion-item *ngIf="mode == 'Map'" class="imagemap">
   <image-map *ngIf="mode == 'Map' && selectedMap == 'Ground Floor'" [src]="'../assets/rooms/ground-floor-layout.png'" [coordinates]="" (onClick)="getClick($event)"></image-map>
   <image-map *ngIf="mode == 'Map' && selectedMap == 'First Floor'" [src]="'../assets/rooms/first-floor-layout.png'" [coordinates]="" (onClick)="getClick($event)"></image-map>

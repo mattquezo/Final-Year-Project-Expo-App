@@ -13,15 +13,18 @@
     </ion-toolbar>
   </ion-header>
 
+  <!-- Filters organised into an accordian style drop down menu -->
   <ion-accordion-group #accordionGroup>
     <ion-accordion value="filters">
       <ion-item slot="header" color="light">
         <ion-label>Filters</ion-label>
         <ion-label class="header-center">{{searchString}}</ion-label>
       </ion-item>
+
       <div slot="content">
         <ion-item>
           <ion-select #area label="Filter by Area" placeholder="Area" (ionChange)="getProjectByArea($event.target.value)">
+            <!-- Loop through project areas of a project -->
             <ion-select-option *ngFor="let projectArea of areasList" [value]=projectArea>{{ projectArea
               }}</ion-select-option>
           </ion-select>
@@ -30,6 +33,7 @@
         <ion-item>
           <ion-select #technology label="Filter by Technology" placeholder="Technology"
             (ionChange)="getProjectByTechnology($event.target.value)">
+            <!-- Loop through project technologies of a project -->
             <ion-select-option *ngFor="let projectTech of technologiesList" [value]=projectTech>{{ projectTech
               }}</ion-select-option>
           </ion-select>
@@ -38,6 +42,7 @@
         <ion-item>
           <ion-select #programme label="Filter by Programme" placeholder="Programme"
             (ionChange)="getProjectByProgramme($event.target.value)">
+            <!-- Loop through student programmes of a project -->
             <ion-select-option *ngFor="let studentProgramme of programmesList" [value]=studentProgramme>{{
               studentProgramme
               }}</ion-select-option>
@@ -47,6 +52,7 @@
         <ion-item>
           <ion-select #location label="Filter by Location" placeholder="Location"
             (ionChange)="getProjectByLocation($event.target.value)">
+            <!-- Loop through project locations of a project -->
             <ion-select-option *ngFor="let projectLocation of locationsList" [value]=projectLocation>{{ projectLocation
               }}</ion-select-option>
           </ion-select>
@@ -55,6 +61,7 @@
     </ion-accordion>
   </ion-accordion-group>
 
+  <!-- Load all projects on start up -->
   <ion-list>
     <ion-item *ngFor="let item of data" class="projectitem" (click)="selectProject(item)">
       <ion-label>
@@ -62,7 +69,8 @@
       </ion-label>
     </ion-item>
   </ion-list>
-  <!-- <ion-spinner *ngIf="!dataLoaded"></ion-spinner> -->
+
+  <!-- Loading spinner -->
   <ngx-spinner bdColor="rgba(51,51,51,0.8)" size="medium" color="#fff" type="ball-scale-pulse">
     <p style="font-size: 20px; color: white">Loading...</p>
   </ngx-spinner>

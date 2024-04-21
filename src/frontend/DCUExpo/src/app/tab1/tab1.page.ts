@@ -17,14 +17,17 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class Tab1Page {
 
-  // refer to the select via the template reference
-@ViewChild('area', { static: false }) area: IonSelect | undefined;
-// refer to the select via the template reference
-@ViewChild('technology', { static: false }) technology: IonSelect | undefined;
-// refer to the select via the template reference
-@ViewChild('location', { static: false }) location: IonSelect | undefined;
-// refer to the select via the template reference
-@ViewChild('programme', { static: false }) programme: IonSelect | undefined;
+ // refer to the select via the template reference
+ @ViewChild('area', { static: false }) area: IonSelect | undefined;
+ 
+ // refer to the select via the template reference
+ @ViewChild('technology', { static: false }) technology: IonSelect | undefined;
+ 
+ // refer to the select via the template reference
+ @ViewChild('location', { static: false }) location: IonSelect | undefined;
+ 
+ // refer to the select via the template reference
+ @ViewChild('programme', { static: false }) programme: IonSelect | undefined;
 
   data : any;
   dataLoaded: boolean = false;
@@ -45,6 +48,7 @@ export class Tab1Page {
 
   @ViewChild('accordionGroup', { static: true }) accordionGroup: IonAccordionGroup|undefined;
 
+  // When the app opens, it will load every project and list them
   ionViewWillEnter() {
     if(!this.dataLoaded)
       {
@@ -52,6 +56,7 @@ export class Tab1Page {
       }
   }
 
+  // Toggle function for accordion drop down menu
   toggleAccordion = () => {
     const nativeEl = this.accordionGroup;
     if (nativeEl!.value === 'filter') {
@@ -61,6 +66,7 @@ export class Tab1Page {
     }
   };
 
+  // Selecting a different filter will reset the previous selected filter
   resetFilter(){
     this.area!.value = "";
     this.location!.value = "";
@@ -68,16 +74,18 @@ export class Tab1Page {
     this.programme!.value = "";
   }
 
+  // Selecting project will direct user to details tab
   selectProject(item: Project) {
     console.log(item);
     this._projectService.assignProjectId(item.projectId);
     this.router.navigateByUrl('/tabs/tab3');
   }
 
+  // Gets API call for each project
   getProject() {
     this.dataLoaded = false;
     this.spinner.show();
-    var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject"
+    var url = "http://dcuexpoapp-dev.eba-5gqsqffu.eu-west-1.elasticbeanstalk.com/api/ExpoProject"  // Online database hosted on AWS RDS
     this._apiHttpService.get<Project>(url).subscribe((response: any) => {
       this.dataLoaded = true;
       this.data = response
@@ -86,6 +94,7 @@ export class Tab1Page {
     },(error) => alert(error.message))
   }
 
+  // Get API call for projects containing filtered technology
   getProjectByTechnology(technology: string) {
     this.resetFilter();
     this.technology!.value = technology;
@@ -103,6 +112,7 @@ export class Tab1Page {
     })
   }
 
+  // Get API call for projects containing filtered area
   getProjectByArea(area: string) {
     this.resetFilter();
     this.area!.value = area;
@@ -119,6 +129,7 @@ export class Tab1Page {
     })
   }
 
+  // Get API call for projects containing filtered student programme
   getProjectByProgramme(programme: string) {
     this.resetFilter();
     this.searchString = programme;
@@ -135,6 +146,7 @@ export class Tab1Page {
     })
   }
 
+  // Get API call for projects containing filtered location
   getProjectByLocation(location: string) {
     this.resetFilter();
     this.location!.value = location;

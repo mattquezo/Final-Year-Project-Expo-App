@@ -1,7 +1,3 @@
-
-
-
-
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
@@ -9,6 +5,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   templateUrl: './image-map.component.html',
   styleUrls: ['./image-map.component.scss']
 })
+
 export class ImageMapComponent implements OnInit {
 
   @Input()
@@ -27,6 +24,7 @@ export class ImageMapComponent implements OnInit {
 
   ngOnInit() { this.onAreaCreate(0,0)  }
 
+  // Definition of coordinates
   getCoordinateStyle(coordinate: ImageMapCoordinate): object {
     return {
       top: `${coordinate.y}%`,
@@ -69,12 +67,13 @@ export class ImageMapComponent implements OnInit {
 
 }
 
+// Defining the coordinates of a project
 export class ImageMapCoordinate {
-  x: number = 0
-  y: number = 0
-  width: number = 100
-  height: number = 100
-  name?: string
+  x: number = 0  // x coordinate
+  y: number = 0  // y coordinate
+  width: number = 100 // size of width of box
+  height: number = 100  // size of height of box
+  name?: string  // Project Number
 
   constructor(init?: Partial<ImageMapCoordinate>) {
     Object.assign(this, init);
