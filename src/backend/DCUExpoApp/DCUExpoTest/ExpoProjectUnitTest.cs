@@ -13,6 +13,7 @@ namespace DCUExpoTest
         {
             ExpoProject[] expoProject;
 
+            // 10 sample projects for testing
             expoProject = new ExpoProject[]
             {
                 new ExpoProject
@@ -689,9 +690,10 @@ namespace DCUExpoTest
                 }
             };
 
+            // Put the projects into an array
             var data = expoProject.ToList();
 
-            var mockExpoProjectsDbSet = new Mock<DbSet<ExpoProject>>();
+            var mockExpoProjectsDbSet = new Mock<DbSet<ExpoProject>>();  // Define mock ExpoProjectDbSet
             mockExpoProjectsDbSet.As<IQueryable<ExpoProject>>().Setup(m => m.Provider).Returns(data.AsQueryable().Provider);
             mockExpoProjectsDbSet.As<IQueryable<ExpoProject>>().Setup(m => m.Expression).Returns(data.AsQueryable().Expression);
             mockExpoProjectsDbSet.As<IQueryable<ExpoProject>>().Setup(m => m.ElementType).Returns(data.AsQueryable().ElementType);
@@ -705,18 +707,19 @@ namespace DCUExpoTest
         {
             var mockExpoDbSet = GetMockExpoProject();
 
-            //Creating a mock ExpoContext (DbContext)
+            // Creating a mock ExpoContext (DbContext)
             var mockContext = new Mock<ExpoContext>();
 
-            //Setup the mock context to use data from above, this makes a fake database
+            // Setup the mock context to use data from above, this makes a fake database
             mockContext.Setup(m => m.Projects).Returns(mockExpoDbSet.Object);
 
-            //create a mockCrudService
+            // Create a mockCrudService
             var crudService = new CrudService(mockContext.Object);
 
             return crudService;
         }
 
+        // Get all projects test
         [Test]
         public void GetProjectCountTest()
         {
@@ -727,6 +730,7 @@ namespace DCUExpoTest
             Assert.AreEqual(10, results.Count);
         }
 
+        // Get project by ID tests
         [Test]
         public void GetProjectByIdTest1()
         {
@@ -766,6 +770,7 @@ namespace DCUExpoTest
             Assert.AreEqual("Dr Shirley Coyle", results.SupervisorsName);
         }
 
+        // Get project by area test
         [Test]
         public void GetProjectByAreaTest1()
         {
@@ -805,6 +810,7 @@ namespace DCUExpoTest
             Assert.True(results.Any(project => project.SupervisorsName == "Dr Muhannad Obeidi"));
         }
 
+        // Get project by technology test
         [Test]
         public void GetProjectByTechnology1()
         {
@@ -844,8 +850,9 @@ namespace DCUExpoTest
             Assert.True(results.Any(project => project.SupervisorsName == "Prof Mark Roantree"));
         }
 
+        // Get project by programme test
         [Test]
-        public void GetProjectByStudentProgramme1()
+        public void GetProjectByProgramme1()
         {
             var crudService = GetMockCrudService();
 
@@ -858,7 +865,7 @@ namespace DCUExpoTest
         }
 
         [Test]
-        public void GetProjectByStudentProgramme2()
+        public void GetProjectByProgramme2()
         {
             var crudService = GetMockCrudService();
 
@@ -871,7 +878,7 @@ namespace DCUExpoTest
         }
 
         [Test]
-        public void GetProjectByStudentProgramme3()
+        public void GetProjectByProgramme3()
         {
             var crudService = GetMockCrudService();
 
@@ -883,8 +890,9 @@ namespace DCUExpoTest
             Assert.True(results.Any(project => project.SupervisorsName == "Dr Stephen Blott"));
         }
 
+        // Get project by location test
         [Test]
-        public void GetProjectByProjectLocationTest1()
+        public void GetProjectByLocationTest1()
         {
             var crudService = GetMockCrudService();
 
@@ -897,7 +905,7 @@ namespace DCUExpoTest
         }
 
         [Test]
-        public void GetProjectByProjectLocationTest2()
+        public void GetProjectByLocationTest2()
         {
             var crudService = GetMockCrudService();
 
@@ -910,7 +918,7 @@ namespace DCUExpoTest
         }
 
         [Test]
-        public void GetProjectByProjectLocationTest3()
+        public void GetProjectBytLocationTest3()
         {
             var crudService = GetMockCrudService();
 
@@ -919,7 +927,7 @@ namespace DCUExpoTest
             Assert.True(results.Any(project => project.ProjectId == 60));
             Assert.True(results.Any(project => project.ProjectTitle == "Smart Commute"));
             Assert.True(results.Any(project => project.ProjectLocation == "LG27"));
-            Assert.True(results.Any(project => project.SupervisorsName == "Dr Stephen Blott"));
+            Assert.True(results.Any(project => project.SupervisorsName == "Dr Stephen Blott")); 
         }
     }
 }

@@ -5,15 +5,17 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace DCUExpoApp.Controllers
 {
+    // API controller for database
     [Route("api/[controller]")]
     [ApiController]
     public class ExpoProjectController : ControllerBase
     {
         public readonly CrudService _crudService;
         public ExpoProjectController(CrudService crudService) {
-            _crudService = crudService;
+            _crudService = crudService; // Crud Service definition
         }
 
+        // Initial project entry data
         private static ExpoProject[] ExpoProjectData = new ExpoProject[]
         {
             new ExpoProject()
@@ -50,36 +52,42 @@ namespace DCUExpoApp.Controllers
             }
         };
 
+        // GET API call for all projects
         [HttpGet(Name = "GetAllExpoProject")]
         public ExpoProject[] Get()
         {
             return _crudService.GetAllProjects().ToArray();
         }
 
+        // GET API call for project by ID
         [HttpGet("projectid/{id}", Name = "GetExpoProject")]
         public ExpoProject GetId(int id)
         {
             return _crudService.GetProject(id);
         }
 
+        // GET API call for projects by area
         [HttpGet("projectarea/{projectArea}", Name = "GetExpoProjectByProjectArea")]
         public ExpoProject[] GetProjectArea(string projectArea)
         {
             return _crudService.GetProjectByProjectArea(projectArea).ToArray();
         }
 
+        // GET API call for projects by technology
         [HttpGet("projecttechnology/{projectTechnology}", Name = "GetExpoProjectByProjectTechnology")]
         public ExpoProject[] GetProjectTechnology(string projectTechnology)
         {
             return _crudService.GetProjectByProjectTechnology(projectTechnology).ToArray();
         }
 
+        // GET API call for projects by programme
         [HttpGet("studentprogramme/{studentProgramme}", Name = "GetExpoProjectByStudentProgramme")]
         public ExpoProject[] GetStudentProgramme(string studentProgramme)
         {
             return _crudService.GetProjectByStudentProgramme(studentProgramme).ToArray();
         }
 
+        // GET API call for project by location
         [HttpGet("projectlocation/{projectLocation}", Name = "GetExpoProjectByProjectLocation")]
         public ExpoProject[] GetProjectLocation(string projectLocation)
         {
